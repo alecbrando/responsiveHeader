@@ -7,10 +7,10 @@ import {
   SideBtnWrap,
   SidebarRoute,
 } from "./SidebarElements";
-function Sidebar() {
+function Sidebar({ toggle, isOpen }) {
   return (
-    <SidebarContainer>
-      <Icon>
+    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+      <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
